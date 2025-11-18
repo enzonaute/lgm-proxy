@@ -1,0 +1,9 @@
+# Exemple de fichier de variables d'environnement pour le développement local
+# Copiez ce fichier vers .dev.vars et ajoutez vos valeurs
+
+# Aucune variable d'environnement n'est actuellement configurée sur Cloudflare
+# Ajoutez ici vos variables si nécessaire
+
+# Exemple :
+# API_KEY=your_api_key_here
+# DEBUG=true

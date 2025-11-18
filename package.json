@@ -1,0 +1,29 @@
+{
+  "name": "pprod-proxy-wf-v2",
+  "version": "1.0.0",
+  "description": "Proxy Cloudflare pour LGM (webflow <-> wordpress)",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "echo 'No build step required'",
+    "cf:login": "wrangler whoami",
+    "logs": "wrangler tail --name pprod-proxy-wf-v2",
+    "preview": "wrangler dev --local",
+    "deployments": "wrangler deployments list --name pprod-proxy-wf-v2",
+    "versions": "wrangler versions list --name pprod-proxy-wf-v2"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "proxy",
+    "webflow",
+    "wordpress"
+  ],
+  "author": "enzonaute",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {}
+}

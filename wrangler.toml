@@ -1,0 +1,36 @@
+# Nom du worker (doit correspondre au nom sur Cloudflare)
+name = "lgm-proxy-production"
+main = "src/index.js"
+
+# Date de compatibilité
+compatibility_date = "2025-09-20"
+
+# Account ID de votre compte Cloudflare LGM
+account_id = "138a687a78cb896f0d865c9da483dad6"
+
+# Routes configurées pour la PRODUCTION
+# lagrowthmachine.com = root domain (Webflow via webproxy.lagrowthmachine.com backend)
+# wp.lagrowthmachine.com = WordPress backend
+[[routes]]
+pattern = "lagrowthmachine.com/*"
+zone_name = "lagrowthmachine.com"
+
+# Route pour l'environnement de preprod
+[[routes]]
+pattern = "router.lagrowthmachine.com/*"
+zone_name = "lagrowthmachine.com"
+
+# Variables d'environnement
+# Aucune variable ou secret n'est configuré sur Cloudflare actuellement
+[vars]
+# Ajoutez vos variables d'environnement ici si nécessaire
+
+# Configuration pour le développement local
+[dev]
+port = 8787
+local_protocol = "http"
+host = "router.lagrowthmachine.com"
+
+# Observability - Workers Logs activés sur Cloudflare
+[observability]
+enabled = true
